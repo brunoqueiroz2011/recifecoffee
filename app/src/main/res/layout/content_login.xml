@@ -2,19 +2,18 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="150dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".LoginActivity"
     tools:showIn="@layout/activity_login">
-
 
         <LinearLayout
             android:layout_width="388dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="132dp">
+            tools:ignore="MissingConstraints">
 
 
                 <TextView
@@ -52,6 +51,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/colorRecifeCoffee"
                     android:text="Login"
+                    android:textAlignment="center"
                     android:textColor="@color/colorTextRecifeCoffee"
                     android:textSize="18dp" />
         </LinearLayout>
