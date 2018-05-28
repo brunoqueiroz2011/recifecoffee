@@ -7,20 +7,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import br.com.agnes_bruno.recifecoffee.Utils.Prefs;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        SharedPreferences preferences =
-                getSharedPreferences("user_preferences", MODE_PRIVATE);
-        if (preferences.contains("is_open_app")) {
+        //SharedPreferences preferences =
+         //       getSharedPreferences("user_preferences", MODE_PRIVATE);
+        mostrarSplash();
+        /*if (preferences.contains("is_open_app")) {
             mostrarLogin();
         } else {
             adicionarPreferenceJaAbriu(preferences);
             mostrarSplash();
-        }
+        }*/
     }
 
     private void adicionarPreferenceJaAbriu(SharedPreferences preferences) {

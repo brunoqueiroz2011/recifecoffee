@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_marginTop="150dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".LoginActivity"
     tools:showIn="@layout/activity_login">
 
         <LinearLayout
-            android:layout_width="388dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
 
@@ -19,8 +21,6 @@
                     android:id="@+id/tv_Usuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
                     android:layout_marginTop="16dp"
                     android:text="Usuário"
                     android:textColor="@color/colorRecifeCoffee"
@@ -31,20 +31,20 @@
                     android:id="@+id/edit_Usuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
                     android:minLines="1"
                     android:textColorHighlight="@color/colorRecifeCoffee"
                     android:textColorHint="@color/colorRecifeCoffee"
                     android:textColorLink="@color/colorRecifeCoffee"
-                    tools:textColor="@color/colorRecifeCoffee" />
+                    tools:textColor="@color/colorRecifeCoffee"
+                    android:lines="1"
+                    android:inputType="textAutoComplete"
+                    android:imeActionLabel="Enter"
+                    android:imeOptions="actionGo"/>
 
                 <TextView
                     android:id="@+id/tv_Senha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
                     android:layout_marginTop="16dp"
                     android:text="Senha"
                     android:textColor="@color/colorRecifeCoffee"
@@ -55,22 +55,19 @@
                     android:id="@+id/edit_Senha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
                     android:minLines="1"
-                    android:password="true"
                     android:textColorLink="@color/colorRecifeCoffee"
                     tools:textColor="@color/colorRecifeCoffee"
-                    tools:textColorHighlight="@color/colorRecifeCoffee"
-                    tools:textColorHint="@color/colorRecifeCoffee" />
+                    android:lines="1"
+                    android:inputType="textPassword"
+                    android:imeActionLabel="Login"
+                    android:imeOptions="actionDone"/>
 
                 <Button
                     android:id="@+id/btn_Login"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginLeft="16dp"
                     android:background="@color/colorRecifeCoffee"
                     android:text="Login"
                     android:textAlignment="center"

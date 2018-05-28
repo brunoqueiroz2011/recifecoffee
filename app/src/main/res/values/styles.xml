@@ -20,4 +20,8 @@
     <style name="AppCompat.FullScreen" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="AppCompat.FullScreen.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppCompat.FullScreen.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

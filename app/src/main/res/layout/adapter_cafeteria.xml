@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:layout_gravity="center_vertical"
+    android:background="@color/colorRecifeCoffee">
+
+    <!-- Logo da Cafeteria-->
+    <ImageView
+        android:id="@+id/logoCafeteria"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:src="@drawable/a_vida_e_bela"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_weight="7"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title_cafeteria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextRecifeCoffee"
+            android:text="A Vida é Bela"
+            tools:ignore="Suspicious0dp" />
+
+        <TextView
+            android:id="@+id/horario_cafeteria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            android:textColor="@color/colorTextRecifeCoffee"
+            android:text="Ter-Sex:12h às 20h e Sab-Dom: 15h às 20h"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:ignore="Suspicious0dp" />
+
+        <TextView
+            android:id="@+id/localizacao_cafeteria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:textStyle="normal"
+            android:textColor="@color/colorTextRecifeCoffee"
+            android:text="Rua Francisco Lacerda, n° 394, Varzea"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:ignore="Suspicious0dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -15,12 +15,7 @@
         android:scaleType="fitStart"
         android:src="@drawable/cover" />
 
-
-
     <include layout="@layout/content_login" />
-
-
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
