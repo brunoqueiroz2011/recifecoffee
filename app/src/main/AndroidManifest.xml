@@ -23,6 +23,10 @@
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"
+            android:theme="@style/AppCompat.FullScreen" />
+        <activity
+            android:name=".CadastroUsuarioActivity"
+            android:label="@string/title_activity_cadastro_usuario"
             android:theme="@style/AppCompat.FullScreen"></activity>
     </application>
 
