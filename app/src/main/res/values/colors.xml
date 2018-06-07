@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#A78747</color>
     <color name="colorPrimaryDark">#A78747</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="buttonColor">#ED4932</color>
     <color name="colorRecifeCoffee">#A78747</color>
     <color name="colorRecifeCoffeeDark">#705B30</color>
     <color name="colorTextRecifeCoffee">#FFFFFF</color>

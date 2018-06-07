@@ -11,6 +11,7 @@ public class Prefs {
     // Identificador do banco de dados destas preferências
     public static final String PREF_ID = "agnesbruno";
 
+
     public static void setBoolean(Context context, String chave, boolean on) {
         SharedPreferences pref = context.getSharedPreferences(PREF_ID, 0);
         SharedPreferences.Editor editor = pref.edit();

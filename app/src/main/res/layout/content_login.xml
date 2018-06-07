@@ -24,8 +24,8 @@
                     android:layout_marginTop="16dp"
                     android:text="Usuário"
                     android:textColor="@color/colorRecifeCoffee"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
 
                 <EditText
                     android:id="@+id/edit_Usuario"

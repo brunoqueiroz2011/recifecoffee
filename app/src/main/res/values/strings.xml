@@ -8,4 +8,7 @@
     <string name="nav_header_subtitle">recifecoffeeoficial@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Configurações</string>
+    <string name="title_activity_cafeteria_detail">CafeteriaDetailActivity</string>
+    <string name="title_activity_cadastro_usuario">Cadastro Usuário</string>
+    <string name="title_activity_sobre">Sobre</string>
 </resources>

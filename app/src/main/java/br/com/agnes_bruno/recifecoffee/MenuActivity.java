@@ -19,12 +19,14 @@ import java.util.List;
 
 import br.com.agnes_bruno.recifecoffee.Cafeteria.Cafeteria;
 import br.com.agnes_bruno.recifecoffee.Cafeteria.CafeteriaAdapter;
+import br.com.agnes_bruno.recifecoffee.Utils.Singleton;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener {
 
-    private ListView listView;
-    private List<Cafeteria> cafeterias;
+    private ListView listView; //ListView que mostra na tela principal as cafeteria
+    private List<Cafeteria> cafeterias; //Lista das cafeterias cadastradas
+    private Singleton singleton = Singleton.getInstance();//Inicio da instancia da class
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,13 @@ public class MenuActivity extends AppCompatActivity
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int idx, long id) {
         Cafeteria cafeteria = this.cafeterias.get(idx);
-        Toast.makeText(this,"Cafeteria: "+ cafeteria.getNome()+ "\n Horario: "+ cafeteria.getHorarios()+"\n Localização: "+ cafeteria.getLocalizacao(), Toast.LENGTH_SHORT).show();
+        singleton.setInstagram(cafeteria.getInstagram());
+        singleton.setFacebook(cafeteria.getFacebook());
+        singleton.setImgBackground(cafeteria.getImgBackground());
+
+        Intent intent = new Intent(MenuActivity.this, CafeteriaDetailActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
     @Override
@@ -79,12 +87,6 @@ public class MenuActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        /*if (id == R.id.action_settings) {
-            return true;
-        }*/
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -103,6 +105,9 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_profile) {
 
         } else if (id == R.id.nav_about) {
+            Intent intent = new Intent(MenuActivity.this, SobreActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_logout) {
             Intent intent = new Intent(MenuActivity.this, LoginActivity.class);

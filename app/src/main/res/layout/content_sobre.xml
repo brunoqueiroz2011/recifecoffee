@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTextRecifeCoffee"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SobreActivity"
+    tools:showIn="@layout/app_bar_sobre">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="O FESTIVAL"
+                android:textAlignment="center"
+                android:textColor="@color/colorRecifeCoffee"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="SOBRE O RECIFE COFFEE"
+                android:textColor="@color/colorRecifeCoffee"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="O Recife Coffee é um circuito de cafés especiais realizado anualmente no Grande Recife, oferecendo o melhor em harmonizações exclusivas a preços acessíveis ao público apreciador do bom e sempre presente cafezinho.
+
+Uma das bebidas mais consumidas no Brasil, o café possui uma gama extensa de sabores, resultantes dos mais variados níveis de torrefação, além de técnicas diversas de filtragem. Pernambuco tem se mostrado um polo crescente neste setor, com casas que além de servir café, também fazem sua própria torra, orientam o consumidor e ainda oferecem formação.
+
+Tudo isto é reflexo de um público cada vez mais exigente, e esta relação entre os profissionais do grão e o consumidor é benéfica ao setor, garantindo uma demanda constante por excelência e criatividade.
+
+Por isso, a cada ano o Recife Coffee reúne os melhores profissionais com o objetivo de apresentar o café num viés mais amplo, além de contribuir para a desmistificação em torno do universo das cafeterias. Com a Sugestão do Barista vendida a um preço fixo em todos os locais participantes do circuito, o Recife Coffee faz a sua parte na formação de público e fortalecimento do mercado e dos talentos locais.
+
+Em 2018, o evento tem início em 2 de maio e segue até 3 de junho, oferecendo a Sugestão do Barista, uma harmonização de café especial com uma receita salgada e uma doce, a R$ 24,90.
+
+Todas as cafeterias participantes trabalham com grãos especiais, possuem baristas no preparo do café, atendimento mais intimista e não pertencem a grandes redes."
+                android:textColor="@color/colorRecifeCoffee"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sobre_quando" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sobre_onde" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sobre_sugestao" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -15,15 +15,15 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        //SharedPreferences preferences =
-         //       getSharedPreferences("user_preferences", MODE_PRIVATE);
+        SharedPreferences preferences =
+                getSharedPreferences("user_preferences", MODE_PRIVATE);
         mostrarSplash();
-        /*if (preferences.contains("is_open_app")) {
+        if (preferences.contains("is_open_app")) {
             mostrarLogin();
         } else {
             adicionarPreferenceJaAbriu(preferences);
             mostrarSplash();
-        }*/
+        }
     }
 
     private void adicionarPreferenceJaAbriu(SharedPreferences preferences) {

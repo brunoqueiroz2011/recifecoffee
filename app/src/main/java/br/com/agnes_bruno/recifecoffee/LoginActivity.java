@@ -2,6 +2,7 @@ package br.com.agnes_bruno.recifecoffee;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -28,7 +29,14 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        //login();
+
+        SharedPreferences preferences =
+                getSharedPreferences("agnesbruno", MODE_PRIVATE);
+        if ((!Prefs.getString(LoginActivity.this, "Usuario").isEmpty()) &&
+                (!Prefs.getString(LoginActivity.this, "Senha").isEmpty())) {
+            login();
+        }
+
         editUser = findViewById(R.id.edit_Usuario); //Faz a associação do Java com o layout
         editSenha = findViewById(R.id.edit_Senha); //Faz a associação do Java com o layout
 
@@ -63,12 +71,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Esse botão chamara a tela de Cadastro para que o usuário possa e cadastra
-                /*Intent intent = new Intent(LoginActivity.this,
-                        SplashScreenActivity.class);
+                Intent intent = new Intent(LoginActivity.this, CadastroUsuarioActivity.class);
                 startActivity(intent);
-                finish();*/
-                Snackbar.make(view, "Tela de Cadastro", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                finish();
             }
         });
 
@@ -82,9 +87,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void validateCampos(){
+
+        String userSave = Prefs.getString(LoginActivity.this, "Usuario");
+        String passSave = Prefs.getString(LoginActivity.this, "Senha");
+        String user = editUser.getText().toString();
+        String pass = editSenha.getText().toString();
+
         if (editUser.getText().length() != 0 && editSenha.getText().length() != 0){
-            if ((Prefs.getString(this, "User") == editUser.getText().toString()) &&
-                (Prefs.getString(this, "Pass") == editSenha.getText().toString())){
+            if ((userSave.equals(user)) && (passSave.equals(pass))){
                 handle.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -115,7 +125,6 @@ public class LoginActivity extends AppCompatActivity {
         //define um botão como positivo
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface arg0, int arg1) {
-                login();
             }
         });
         //cria o AlertDialog
